@@ -34,5 +34,14 @@ describe Activity do
     end
   end
 
+  describe '#split' do
+    it 'should divide the cost evenly across participants' do
+      @activity.add_participant("Maria", 20)
+      @activity.add_participant("Luther", 40)
+      expect(@activity.total_cost).to eq(60)
+      expect(@activity.split).to eq(30)
+    end
+  end
+
 
 end
