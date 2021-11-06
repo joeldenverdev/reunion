@@ -3,5 +3,10 @@ class Reunion
 
   def initialize(name)
     @name = name
-  end 
+    @activities = []
+  end
+
+  def add_activity(activity)
+    @activities << activity
+  end
 end
