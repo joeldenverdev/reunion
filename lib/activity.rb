@@ -18,4 +18,8 @@ class Activity
     total_cost / @participants.size
   end
 
+  def owed
+    @participants.transform_values { |participant| (participant - split) }
+  end
+
 end
