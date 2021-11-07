@@ -32,4 +32,8 @@ class Reunion
     return total_money
   end
 
+  def summary
+    breakout.to_s.gsub("=>", ": ").delete("\"" + "{" + "}").gsub(", ", "\n")
+  end
+
 end
